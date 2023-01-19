@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:key="ersteKategorie"
+        android:title="1. Kategorie">
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="cbUpdates"
+            android:summary="Automatische Updates"
+            android:title="Updates" />
+
+    </PreferenceCategory>
+
+    <!-- ================================================================ -->
+
+    <PreferenceCategory
+        android:key="zweiteKategorie"
+        android:title="Kategorie 2">
+
+        <ListPreference
+            android:defaultValue="1000"
+            android:dependency="cbUpdates"
+            android:entries="@array/updateIntervallBeschriftung"
+            android:entryValues="@array/updateIntervallWerte"
+            android:key="update_intervall"
+            android:summary="Wie oft wird geupdatet?"
+            android:title="Update-Intervall" />
+
+    </PreferenceCategory>
+
+    <!-- ================================================================ -->
+
+    <PreferenceCategory
+        android:key="dritteKategorie"
+        android:title="Kategorie 3">
+
+        <ListPreference
+            android:defaultValue="0"
+            android:entries="@array/schriftfarbeBeschr"
+            android:entryValues="@array/schriftfarbeWert"
+            android:key="schriftfarbe"
+            android:summary="Schriftfarbe fuer die TextView"
+            android:title="Schriftfarbe" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
